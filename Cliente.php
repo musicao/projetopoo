@@ -50,7 +50,7 @@ class Cliente implements iCLiente{
         $cidade = $cidades[rand(0, 3)];
 
 
-        return  array([strtoupper($nome . ' ' . $sobrenome), strtolower("$nome$sobrenome@email.com"),$cidade, $this->geraCPF()]);
+        return  array([strtoupper($nome . ' ' . $sobrenome), "$nome$sobrenome@email.com",$cidade, $this->geraCPF()]);
     }
 
     /**

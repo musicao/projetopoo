@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $rota = parse_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 $path = urldecode(substr($rota['path'], 1));
 ?>
@@ -17,35 +17,64 @@ $path = urldecode(substr($rota['path'], 1));
     <div class="container">
         <?php
         require_once('Cliente.php');
-        $clientes = [];
-        for ($i = 0; $i < 10; $i++){
-            $cli = new Cliente();
-            $dados = $cli->gerarDadosCliente();
-            $dados = $dados[0];
+
+        if( !isset ($_SESSION['cliente'] )){
+
+            $clientes = [];
+            for ($i = 0; $i < 10; $i++){
+                $cli = new Cliente();
+                $dados = $cli->gerarDadosCliente();
+                $dados = $dados[0];
 
 
-            $cli->setNome($dados[0]);
-            $cli->setEmail($dados[1]);
-            $cli->setCidade($dados[2]);
-            $cli->setCpf($dados[3]);
-            array_push($clientes,$cli);
+                $cli->setNome($dados[0]);
+                $cli->setEmail($dados[1]);
+                $cli->setCidade($dados[2]);
+                $cli->setCpf($dados[3]);
+                array_push($clientes,$cli);
 
+            }
+
+            $_SESSION['cliente'] = serialize($clientes);
+
+        }else{
+            $clientes = unserialize($_SESSION['cliente']);
         }
+
 
         if($path=='DESC') {
             arsort($clientes);
-        }else{
+        }else if($path=='ASC') {
              asort($clientes);
-        }
+        }else  if(strlen($path) == 11){
+
+            foreach ($clientes as $cliente){
+
+                if($cliente->getCpf() == $path){
+
+                    echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF</th></thead><tbody>';
+                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getCpf() . '</td></tr>';
+                    echo '<a style="margin-left:5px;" class="btn btn-primary pull-right" href="javascript:window.history.go(-1)">Voltar</a>';
+
+                }
+
+
+            }
+        }else {
+
+
             echo '<h2>Listagem de clientes</h2>';
             echo '<a style="margin-left:5px;" class="btn btn-primary pull-right" href="/DESC">&downarrow;</a><a class="btn btn-primary pull-right" href="/ASC">&uparrow;</a>';
             echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF</th></thead><tbody>';
 
 
             foreach ($clientes as $cliente) {
-                echo '<tr><td>'.$cliente->getNome(). '</td><td>'.$cliente->getEmail() . '</td><td>'.$cliente->getCidade() . '</td><td>' .  $cliente->getCpf() . '</td></tr>';
+
+
+                echo '<tr><td><a href="' . $cliente->getCpf() . '">'. $cliente->getNome(). '</a></td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getCpf() . '</td></tr>';
             }
             echo '</tbody></table>';
+        }
 
         ?>
     </div>
