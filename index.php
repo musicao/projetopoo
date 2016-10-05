@@ -16,22 +16,43 @@ $path = urldecode(substr($rota['path'], 1));
 <div class="row">
     <div class="container">
         <?php
-        require_once('Cliente.php');
+        require_once('ClientePF.php');
+        require_once('ClientePJ.php');
 
         if( !isset ($_SESSION['cliente'] )){
 
             $clientes = [];
-            for ($i = 0; $i < 10; $i++){
-                $cli = new Cliente();
-                $dados = $cli->gerarDadosCliente();
-                $dados = $dados[0];
+            for ($i = 0; $i < 20; $i++){
+               
+               
 
-
-                $cli->setNome($dados[0]);
-                $cli->setEmail($dados[1]);
-                $cli->setCidade($dados[2]);
-                $cli->setCpf($dados[3]);
-                array_push($clientes,$cli);
+               if((rand(0,2)%2 == 0)){
+                   $cli = new ClientePF();
+                   $dados =  $cli->gerarDadosClientePF();
+                   $dados = $dados[0];
+                   $cli->setNome($dados[0]);
+                   $cli->setEmail($dados[1]);
+                   $cli->setCidade($dados[2]);
+                   $cli->setinsc($dados[3]);
+                   $cli->setImportancia($dados[4]);
+                   $cli->setEndereco($dados[5]);
+                   array_push($clientes,$cli);
+               }else{
+                   $cli = new ClientePJ();
+                   $dados =  $cli->gerarDadosClientePJ();
+                   $dados = $dados[0];
+                   $cli->setNome($dados[0]);
+                   $cli->setEmail($dados[1]);
+                   $cli->setCidade($dados[2]);
+                   $cli->setinsc($dados[3]);
+                   $cli->setImportancia($dados[4]);
+                   $cli->setEndereco($dados[5]);
+                   
+                    
+                   array_push($clientes,$cli);
+               }
+                   
+                 
 
             }
 
@@ -41,19 +62,36 @@ $path = urldecode(substr($rota['path'], 1));
             $clientes = unserialize($_SESSION['cliente']);
         }
 
-
-        if($path=='DESC') {
+          if($path=='DESC') {
             arsort($clientes);
         }else if($path=='ASC') {
              asort($clientes);
-        }else  if(strlen($path) == 11){
+        }
+        
+        if(strlen($path) == 11){
 
             foreach ($clientes as $cliente){
 
-                if($cliente->getCpf() == $path){
+                if($cliente->getInsc() == $path){
 
-                    echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF</th></thead><tbody>';
-                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getCpf() . '</td></tr>';
+                    echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF/cnpj</th><th>Tipo</th><th>Importancia</th><th>Endereço</th></thead><tbody>';
+                   
+                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>'. $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td></td>'. $cliente->getEndereco() . '</tr>';
+                    
+                    echo '<a style="margin-left:5px;" class="btn btn-primary pull-right" href="javascript:window.history.go(-1)">Voltar</a>';
+
+                }
+
+
+            }
+        }else if(strlen($path) == 14){
+
+            foreach ($clientes as $cliente){
+
+                if($cliente->getInsc() == $path){
+
+                    echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF/cnpj</th><th>Tipo</th><th>Importancia</th><th>Endereço</th></thead><tbody>';
+                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>'. $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td><td>'. $cliente->getEndereco() . '</tr>';
                     echo '<a style="margin-left:5px;" class="btn btn-primary pull-right" href="javascript:window.history.go(-1)">Voltar</a>';
 
                 }
@@ -65,13 +103,13 @@ $path = urldecode(substr($rota['path'], 1));
 
             echo '<h2>Listagem de clientes</h2>';
             echo '<a style="margin-left:5px;" class="btn btn-primary pull-right" href="/DESC">&downarrow;</a><a class="btn btn-primary pull-right" href="/ASC">&uparrow;</a>';
-            echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF</th></thead><tbody>';
+            echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF/cnpj</th><th>Tipo</th><th>Importancia</th><th>Endereço</th></thead><tbody>';
 
 
             foreach ($clientes as $cliente) {
 
 
-                echo '<tr><td><a href="' . $cliente->getCpf() . '">'. $cliente->getNome(). '</a></td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getCpf() . '</td></tr>';
+                echo '<tr><td><a href="' . $cliente->getInsc() . '">'. $cliente->getNome(). '</a></td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>' . $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td><td>'. $cliente->getEndereco() . '</td></tr>';
             }
             echo '</tbody></table>';
         }

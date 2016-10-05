@@ -1,20 +1,24 @@
 <?php
 
-include "iCLiente.php";
+include "ClienteImportanciaInterface.php";
 
-class Cliente implements iCLiente{
+class ClientePF implements ClienteImportanciaInterface{
     private $nome;
     private $email;
     private $cidade;
-    private $cpf;
-
+    private $insc;
+	private $endereco;
+	private $importancia;
+	private $tipoCliente = 'Fisica';
+	
+	
 
     /**
      * Cliente constructor.
      * @param $nome
      * @param $email
      * @param $sexo
-     * @param $cpf
+     * @param $insc
      */
 
 
@@ -22,7 +26,7 @@ class Cliente implements iCLiente{
     /**
      * @return null|string
      */
-    private function geraCPF(){
+    private function gerainsc(){
 
         $retorno = null;
         $num = '1234567890';
@@ -37,7 +41,7 @@ class Cliente implements iCLiente{
     /**
      * @return Cliente
      */
-    public function gerarDadosCliente()
+    public function gerarDadosClientePF()
     {
 
         $nomes = ['ELSA','ANTONIO','MAIA','OLIVER'];
@@ -50,23 +54,23 @@ class Cliente implements iCLiente{
         $cidade = $cidades[rand(0, 3)];
 
 
-        return  array([strtoupper($nome . ' ' . $sobrenome), "$nome$sobrenome@email.com",$cidade, $this->geraCPF()]);
+        return  array([strtoupper($nome . ' ' . $sobrenome), "$nome$sobrenome@email.com",$cidade, $this->gerainsc(),rand(1, 5),""]);
     }
 
     /**
      * @return mixed
      */
-    public function getCpf()
+    public function getinsc()
     {
-        return $this->cpf;
+        return $this->insc;
     }
 
     /**
-     * @param mixed $cpf
+     * @param mixed $insc
      */
-    public function setCpf($cpf)
+    public function setinsc($insc)
     {
-        $this->cpf = $cpf;
+        $this->insc = $insc;
     }
 
     /**
@@ -116,4 +120,41 @@ class Cliente implements iCLiente{
     {
         $this->email = $email;
     }
+	
+	public function getImportancia() {
+		return $this->importancia;
+	}
+	
+	public function setImportancia($importancia) {
+		$this->importancia = $importancia;
+		return $this;
+	}
+	
+	public function getEndereco() {
+		return $this->endereco;
+	}
+	
+	public function setEndereco($endereco) {
+		$this->endereco = $endereco;
+		return $this;
+	}
+	
+	
+	/**
+	 * @return mixed
+	 */
+	public function getTipoCliente()
+	{
+		return $this->tipoCliente;
+	}
+	
+	/**
+	 * @param mixed $tipoCliente
+	 * @return Cliente
+	 */
+	public function setTipoCliente($tipoCliente)
+	{
+		$this->tipoCliente = $tipoCliente;
+		return $this;
+	}
 }
