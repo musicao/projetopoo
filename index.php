@@ -1,4 +1,9 @@
 <?php
+
+//------------------------------------------------------------------------------------------------------------
+require_once('./inc/autoload.php');
+
+
 session_start();
 $rota = parse_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 $path = urldecode(substr($rota['path'], 1));
@@ -16,10 +21,8 @@ $path = urldecode(substr($rota['path'], 1));
 <div class="row">
     <div class="container">
         <?php
-        require_once('ClientePF.php');
-        require_once('ClientePJ.php');
-
-        if( !isset ($_SESSION['cliente'] )){
+        
+        if( !isset ($_SESSION['clientee'] )){
 
             $clientes = [];
             for ($i = 0; $i < 20; $i++){
@@ -35,7 +38,8 @@ $path = urldecode(substr($rota['path'], 1));
                    $cli->setCidade($dados[2]);
                    $cli->setinsc($dados[3]);
                    $cli->setImportancia($dados[4]);
-                   $cli->setEndereco($dados[5]);
+                   $cli->setEnderecoCobranca($dados[5]);
+                   $cli->setTipoCliente("Física");
                    array_push($clientes,$cli);
                }else{
                    $cli = new ClientePJ();
@@ -46,22 +50,25 @@ $path = urldecode(substr($rota['path'], 1));
                    $cli->setCidade($dados[2]);
                    $cli->setinsc($dados[3]);
                    $cli->setImportancia($dados[4]);
-                   $cli->setEndereco($dados[5]);
+                   $cli->setEnderecoCobranca($dados[5]);
+                   $cli->setTipoCliente("Jurídica");
                    
                     
                    array_push($clientes,$cli);
                }
-                   
+                  
                  
 
             }
-
+die;
             $_SESSION['cliente'] = serialize($clientes);
 
         }else{
             $clientes = unserialize($_SESSION['cliente']);
         }
 
+       echo "<pre>",  print_r($clientes);die;
+        
           if($path=='DESC') {
             arsort($clientes);
         }else if($path=='ASC') {
@@ -76,7 +83,7 @@ $path = urldecode(substr($rota['path'], 1));
 
                     echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF/cnpj</th><th>Tipo</th><th>Importancia</th><th>Endereço</th></thead><tbody>';
                    
-                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>'. $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td></td>'. $cliente->getEndereco() . '</tr>';
+                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>'. $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td></td>'. $cliente->getEnderecoCobranca() . '</tr>';
                     
                     echo '<a style="margin-left:5px;" class="btn btn-primary pull-right" href="javascript:window.history.go(-1)">Voltar</a>';
 
@@ -91,7 +98,7 @@ $path = urldecode(substr($rota['path'], 1));
                 if($cliente->getInsc() == $path){
 
                     echo '<table class="table"><thead><th>Nome</th><th>E-mail</th><th>Cidade</th><th>CPF/cnpj</th><th>Tipo</th><th>Importancia</th><th>Endereço</th></thead><tbody>';
-                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>'. $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td><td>'. $cliente->getEndereco() . '</tr>';
+                    echo '<tr><td>'. $cliente->getNome(). '</td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>'. $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td><td>'. $cliente->getEnderecoCobranca() . '</tr>';
                     echo '<a style="margin-left:5px;" class="btn btn-primary pull-right" href="javascript:window.history.go(-1)">Voltar</a>';
 
                 }
@@ -109,7 +116,7 @@ $path = urldecode(substr($rota['path'], 1));
             foreach ($clientes as $cliente) {
 
 
-                echo '<tr><td><a href="' . $cliente->getInsc() . '">'. $cliente->getNome(). '</a></td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>' . $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td><td>'. $cliente->getEndereco() . '</td></tr>';
+                echo '<tr><td><a href="' . $cliente->getInsc() . '">'. $cliente->getNome(). '</a></td><td>'. $cliente->getEmail() . '</td><td>'. $cliente->getCidade() . '</td><td>'. $cliente->getInsc() . '</td><td>' . $cliente->getTipoCliente() . '</td><td>'. $cliente->getImportancia() . '</td><td>'. $cliente->getEnderecoCobranca() . '</td></tr>';
             }
             echo '</tbody></table>';
         }

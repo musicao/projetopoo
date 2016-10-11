@@ -1,10 +1,9 @@
 <?php
 
+namespace Projeto\Cliente\Interfaces;
 
-
-interface ClientePJInterface {
-
-	
+interface ClienteEnderecoInterface {
+ 
     public function getEnderecoCobranca();
     public function setEnderecoCobranca($endereco);
     
