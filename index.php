@@ -22,7 +22,7 @@ $path = urldecode(substr($rota['path'], 1));
     <div class="container">
         <?php
         
-        if( !isset ($_SESSION['clientee'] )){
+        if( !isset ($_SESSION['cliente'] )){
 
             $clientes = [];
             for ($i = 0; $i < 20; $i++){
@@ -77,7 +77,7 @@ $path = urldecode(substr($rota['path'], 1));
         }
         
         if(strlen($path) == 11){
-
+            
             foreach ($clientes as $cliente){
 
                 if($cliente->getInsc() == $path){
