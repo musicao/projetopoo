@@ -1,7 +1,7 @@
 <?php
 
 //------------------------------------------------------------------------------------------------------------
-require_once('./inc/autoload.php');
+require_once('autoload.php');
 
 
 session_start();
@@ -30,7 +30,7 @@ $path = urldecode(substr($rota['path'], 1));
                
 
                if((rand(0,2)%2 == 0)){
-                   $cli = new ClientePF();
+                   $cli = new Projeto\Cliente\Tipos\ClientePF();
                    $dados =  $cli->gerarDadosClientePF();
                    $dados = $dados[0];
                    $cli->setNome($dados[0]);
@@ -41,8 +41,9 @@ $path = urldecode(substr($rota['path'], 1));
                    $cli->setEnderecoCobranca($dados[5]);
                    $cli->setTipoCliente("Física");
                    array_push($clientes,$cli);
+                   
                }else{
-                   $cli = new ClientePJ();
+                   $cli = new Projeto\Cliente\Tipos\ClientePJ();
                    $dados =  $cli->gerarDadosClientePJ();
                    $dados = $dados[0];
                    $cli->setNome($dados[0]);
@@ -60,14 +61,14 @@ $path = urldecode(substr($rota['path'], 1));
                  
 
             }
-die;
+ 
             $_SESSION['cliente'] = serialize($clientes);
 
         }else{
             $clientes = unserialize($_SESSION['cliente']);
         }
 
-       echo "<pre>",  print_r($clientes);die;
+       
         
           if($path=='DESC') {
             arsort($clientes);

@@ -2,8 +2,7 @@
 
 namespace Projeto\Cliente;
 
-use  Projeto\Cliente\Interfaces\ClienteEnderecoInterface;
-use  Projeto\Cliente\Interfaces\ClienteImportanciaInterface;
+ 
 
 abstract  class Pessoa implements ClienteEnderecoInterface, ClienteImportanciaInterface
 {

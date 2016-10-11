@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f75a3bd1-798f-4ce6-8b13-f368afb0fec5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inc/Psr4AutoloaderClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePJ.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientePF.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientePJ.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iCLiente.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ClienteImportanciaInterface.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteImportanciaInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientePJInterface.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteEnderecoInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autoload.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inc/Psr4AutoloaderClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inc/autoload.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteEnderecoInterface.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/ClienteEnderecoInterface.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteImportanciaInterface.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/ClienteImportanciaInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php" />
     </list>
     <ignored path="projetopoo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,31 +30,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClientePF.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePF.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="285">
+              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+              <folding>
+                <marker date="1476212817000" expanded="true" signature="2865:3251" ph="..." />
+                <marker date="1476212817000" expanded="true" signature="3253:3269" ph="..." />
+                <marker date="1476212817000" expanded="true" signature="3709:4053" ph="..." />
+                <marker date="1476212817000" expanded="true" signature="4055:4071" ph="..." />
+                <marker date="1476212817000" expanded="true" signature="4292:4308" ph="..." />
+                <marker date="1476212817000" expanded="true" signature="4358:4369" ph="↓" />
+                <marker date="1476212817000" expanded="true" signature="4423:4432" ph="↑" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClienteImportanciaInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteImportanciaInterface.php">
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autoload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientePJ.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePJ.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            <state relative-caret-position="75">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -66,58 +61,8 @@
       <file leaf-file-name="Pessoa.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClienteEnderecoInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteEnderecoInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding>
-                <marker date="1476155069000" expanded="true" signature="2848:3234" ph="..." />
-                <marker date="1476155069000" expanded="true" signature="3236:3252" ph="..." />
-                <marker date="1476155069000" expanded="true" signature="3692:4036" ph="..." />
-                <marker date="1476155069000" expanded="true" signature="4038:4054" ph="..." />
-                <marker date="1476155069000" expanded="true" signature="4275:4291" ph="..." />
-                <marker date="1476155069000" expanded="true" signature="4341:4352" ph="↓" />
-                <marker date="1476155069000" expanded="true" signature="4406:4415" ph="↑" />
-                <marker date="1476155069000" expanded="true" signature="4592:4683" ph="..." />
-                <marker date="1476155069000" expanded="true" signature="5091:5114" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Psr4AutoloaderClass.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/Psr4AutoloaderClass.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
+            <state relative-caret-position="90">
+              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -165,14 +110,19 @@
         <option value="$PROJECT_DIR$/src/Projeto/Interfaces/ClienteImportanciaInterface.php" />
         <option value="$PROJECT_DIR$/src/Projeto/Tipos/ClientePJ.php" />
         <option value="$PROJECT_DIR$/src/Projeto/Tipos/ClientePF.php" />
+        <option value="$PROJECT_DIR$/inc/sdsd.php" />
+        <option value="$PROJECT_DIR$/inc/Psr4AutoloaderClass.php" />
+        <option value="$PROJECT_DIR$/src/inc/Psr4AutoloaderClass.php" />
+        <option value="$PROJECT_DIR$/src/inc/autoload.php" />
+        <option value="$PROJECT_DIR$/inc/autoload.php" />
         <option value="$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteEnderecoInterface.php" />
         <option value="$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteImportanciaInterface.php" />
+        <option value="$PROJECT_DIR$/autoload.php" />
+        <option value="$PROJECT_DIR$/src/Projeto/Cliente/ClienteEnderecoInterface.php" />
+        <option value="$PROJECT_DIR$/src/Projeto/Cliente/ClienteImportanciaInterface.php" />
         <option value="$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php" />
         <option value="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePF.php" />
         <option value="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePJ.php" />
-        <option value="$PROJECT_DIR$/inc/sdsd.php" />
-        <option value="$PROJECT_DIR$/inc/Psr4AutoloaderClass.php" />
-        <option value="$PROJECT_DIR$/inc/autoload.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -246,6 +196,14 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projeto" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cliente" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -257,7 +215,19 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projeto" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cliente" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tipos" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,10 +247,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Projeto/Cliente" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Projeto" />
       <recent name="$PROJECT_DIR$/src/Projeto/Tipos" />
-      <recent name="$PROJECT_DIR$/src/Projeto/Interfaces" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -365,12 +335,12 @@
       <workItem from="1475282041901" duration="1061000" />
       <workItem from="1475694924021" duration="6468000" />
       <workItem from="1475898454368" duration="534000" />
-      <workItem from="1476141673625" duration="11274000" />
+      <workItem from="1476141673625" duration="14014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30270000" />
+    <option name="totallyTimeSpent" value="33010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -419,7 +389,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteImportanciaInterface.php">
+    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/ClienteImportanciaInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -440,15 +410,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476155069000" expanded="true" signature="2848:3234" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3236:3252" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3692:4036" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4038:4054" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4275:4291" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4341:4352" ph="↓" />
-            <marker date="1476155069000" expanded="true" signature="4406:4415" ph="↑" />
-            <marker date="1476155069000" expanded="true" signature="4592:4683" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="5091:5114" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="2865:3251" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3253:3269" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3709:4053" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4055:4071" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4292:4308" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4358:4369" ph="↓" />
+            <marker date="1476212817000" expanded="true" signature="4423:4432" ph="↑" />
           </folding>
         </state>
       </provider>
@@ -477,7 +445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteImportanciaInterface.php">
+    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/ClienteImportanciaInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -498,15 +466,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476155069000" expanded="true" signature="2848:3234" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3236:3252" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3692:4036" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4038:4054" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4275:4291" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4341:4352" ph="↓" />
-            <marker date="1476155069000" expanded="true" signature="4406:4415" ph="↑" />
-            <marker date="1476155069000" expanded="true" signature="4592:4683" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="5091:5114" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="2865:3251" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3253:3269" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3709:4053" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4055:4071" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4292:4308" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4358:4369" ph="↓" />
+            <marker date="1476212817000" expanded="true" signature="4423:4432" ph="↑" />
           </folding>
         </state>
       </provider>
@@ -540,15 +506,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476155069000" expanded="true" signature="2848:3234" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3236:3252" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3692:4036" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4038:4054" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4275:4291" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4341:4352" ph="↓" />
-            <marker date="1476155069000" expanded="true" signature="4406:4415" ph="↑" />
-            <marker date="1476155069000" expanded="true" signature="4592:4683" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="5091:5114" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="2865:3251" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3253:3269" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3709:4053" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4055:4071" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4292:4308" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4358:4369" ph="↓" />
+            <marker date="1476212817000" expanded="true" signature="4423:4432" ph="↑" />
           </folding>
         </state>
       </provider>
@@ -574,15 +538,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476155069000" expanded="true" signature="2848:3234" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3236:3252" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3692:4036" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4038:4054" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4275:4291" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4341:4352" ph="↓" />
-            <marker date="1476155069000" expanded="true" signature="4406:4415" ph="↑" />
-            <marker date="1476155069000" expanded="true" signature="4592:4683" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="5091:5114" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="2865:3251" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3253:3269" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3709:4053" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4055:4071" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4292:4308" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4358:4369" ph="↓" />
+            <marker date="1476212817000" expanded="true" signature="4423:4432" ph="↑" />
           </folding>
         </state>
       </provider>
@@ -608,15 +570,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476155069000" expanded="true" signature="2848:3234" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3236:3252" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3692:4036" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4038:4054" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4275:4291" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4341:4352" ph="↓" />
-            <marker date="1476155069000" expanded="true" signature="4406:4415" ph="↑" />
-            <marker date="1476155069000" expanded="true" signature="4592:4683" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="5091:5114" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="2865:3251" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3253:3269" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3709:4053" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4055:4071" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4292:4308" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4358:4369" ph="↓" />
+            <marker date="1476212817000" expanded="true" signature="4423:4432" ph="↑" />
           </folding>
         </state>
       </provider>
@@ -650,58 +610,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteEnderecoInterface.php">
+    <entry file="file://$PROJECT_DIR$/inc/Psr4AutoloaderClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="37" />
+        <state relative-caret-position="240">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Interfaces/ClienteImportanciaInterface.php">
+    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/ClienteEnderecoInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        <state relative-caret-position="90">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePF.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/ClienteImportanciaInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="27" />
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePJ.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/Psr4AutoloaderClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+        <state relative-caret-position="30">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -709,17 +669,15 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
           <folding>
-            <marker date="1476155069000" expanded="true" signature="2848:3234" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3236:3252" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="3692:4036" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4038:4054" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4275:4291" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="4341:4352" ph="↓" />
-            <marker date="1476155069000" expanded="true" signature="4406:4415" ph="↑" />
-            <marker date="1476155069000" expanded="true" signature="4592:4683" ph="..." />
-            <marker date="1476155069000" expanded="true" signature="5091:5114" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="2865:3251" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3253:3269" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="3709:4053" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4055:4071" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4292:4308" ph="..." />
+            <marker date="1476212817000" expanded="true" signature="4358:4369" ph="↓" />
+            <marker date="1476212817000" expanded="true" signature="4423:4432" ph="↑" />
           </folding>
         </state>
       </provider>

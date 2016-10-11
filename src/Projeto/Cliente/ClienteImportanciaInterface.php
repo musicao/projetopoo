@@ -1,6 +1,6 @@
 <?php
 
-namespace Projeto\Cliente\Interfaces;
+namespace Projeto\Cliente;
 
 interface ClienteImportanciaInterface {
     
