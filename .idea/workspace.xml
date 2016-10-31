@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f75a3bd1-798f-4ce6-8b13-f368afb0fec5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autoload.php" afterPath="$PROJECT_DIR$/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Pessoa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePF.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePF.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePJ.php" afterPath="$PROJECT_DIR$/src/Projeto/Cliente/Tipos/ClientePJ.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/.idea/poo-clientes.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/cliente.phtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/conn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/index.phtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/src/SON/Cliente/ClienteAbstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/src/SON/Cliente/ClienteInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/src/SON/Cliente/Model/BancoClientes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/src/SON/Cliente/Model/ClienteModel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/src/SON/Cliente/Type/ClientePF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/poo-clientes-master/src/SON/Cliente/Type/ClientePJ.php" afterPath="" />
     </list>
     <ignored path="projetopoo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -410,18 +420,18 @@
       <workItem from="1476141673625" duration="14589000" />
       <workItem from="1476229660765" duration="161000" />
       <workItem from="1476733275441" duration="18000" />
-      <workItem from="1477873213267" duration="3585000" />
+      <workItem from="1477873213267" duration="3687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37349000" />
+    <option name="totallyTimeSpent" value="37451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17349927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17349927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -690,11 +700,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1448984228000" expanded="true" signature="381:418" ph="SELECT * FRO... clientes" />
-            <marker date="1448984228000" expanded="true" signature="930:1019" ph="INSERT INTO clientes... " />
-            <marker date="1448984228000" expanded="true" signature="1525:1559" ph="SELECT * FRO... clientes" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
