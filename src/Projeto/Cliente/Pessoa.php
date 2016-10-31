@@ -6,6 +6,7 @@ namespace Projeto\Cliente;
 
 abstract  class Pessoa implements ClienteEnderecoInterface, ClienteImportanciaInterface
 {
+	protected $id;
 	protected $nome;
 	protected $email;
 	protected $cidade;
@@ -142,7 +143,38 @@ abstract  class Pessoa implements ClienteEnderecoInterface, ClienteImportanciaIn
 		return $this;
 	}
 	
-	abstract public function gerainsc();
+	/**
+	 * @return mixed
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
+	
+	/**
+	 * @param mixed $id
+	 */
+	public function setId($id)
+	{
+		$this->id = $id;
+	}
+	
+	/**
+	 * @return mixed
+	 */
+	public function getEndereco()
+	{
+		return $this->endereco;
+	}
+	
+	/**
+	 * @param mixed $endereco
+	 */
+	public function setEndereco($endereco)
+	{
+		$this->endereco = $endereco;
+	}
+	 
 	
 		
 }

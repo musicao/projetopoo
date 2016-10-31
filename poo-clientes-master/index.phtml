@@ -1,0 +1,77 @@
+<?php
+date_default_timezone_set('America/Sao_Paulo');
+require_once('autoload.php');
+require_once('conn.php');
+
+
+
+$clienteModel = new SON\Cliente\Model\ClienteModel($conn);
+
+    if(isset($_GET['order'])){
+        $clientes = $clienteModel->fetchAll($_GET['order']);
+    }else{
+        $clientes = $clienteModel->fetchAll();
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Clientes</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+<body>
+<div class="container">
+
+    <div class="jumbotron">
+        <h1>Gestão de Clientes</h1>
+        <p>Exercício do Curso de PHP OO da School of Net</p>
+    </div>
+
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ordenar
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="?order=ASC">Crescente</a></li>
+                <li><a href="?order=DESC">Decrescente</a></li>
+            </ul>
+        </div>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <td>Id</td>
+            <td>Nome</td>
+            <td>CPF</td>
+            <td>Endereço</td>
+            <td>Tipo</td>
+            <td>Ações</td>
+        </thead>
+        <?php foreach($clientes as $cliente): ?>
+            <tr>
+                <td><?php echo $cliente->getId() ; ?></td>
+                <td><?php echo $cliente->getNome() ; ?></td>
+                <td><?php echo $cliente->getCPF() ; ?></td>
+                <td><?php echo $cliente->getEndereco() ; ?></td>
+                <td>
+                    <?php echo ($cliente->isPessoaFisica()) ? "Pessoa Física" : "Pessoa Juridica"; ?></td>
+                <td><a href="<?php echo 'cliente.phtml?id='.$cliente->getId() ?>" class="btn btn-primary" title="Visualizar"><span class="glyphicon glyphicon-new-window"></span></a></td>
+            </tr>
+
+        <?php endforeach; ?>
+    </table>
+</div>
+
+
+
+</body>
+</html>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
